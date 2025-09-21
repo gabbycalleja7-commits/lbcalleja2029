@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabby Swims</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e6f7ff;
+        }
+        header {
+            background: #E36588;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #EDADC7;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background: #FF99C9;
+        }
+        section {
+            padding: 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+
+        .gallery { 
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .pool-container {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .pool-container img {
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+        .pool-text {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .training-quote {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-style: italic;
+            color: #E36588; 
+            font-weight: bold;
+        }
+
+        #journey p {
+            font-family: "Poppins", sans-serif;
+            font-size: 18px; 
+            line-height: 1.6;
+            color: #E36588;
+            text-align: justify;
+        }  
+
+        /* About Me images with captions */
+        .about-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .about-image figure {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .about-image img {
+            width: 180px;    
+            height: 180px;      
+            object-fit: cover; 
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        .about-image figcaption {
+            margin-top: 6px;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            color: #E36588;
+        }
+#goals {
+    font-family: 'Poppins', sans-serif;
+    color: #E36588;
+    padding: 20px;
+}
+
+#goals ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+#goals li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#goals li strong {
+    font-weight: 600;
+}
+
+.gallery img {
+width: 250px;
+height: 220px; /* taller */
+object-fit: cover;
+object-position: center center;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+transition: transform 0.3s;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gabby's Swimming Life</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showTab('home')">Home</a>
+        <a href="#" onclick="showTab('about')">About Me</a>
+        <a href="#" onclick="showTab('journey')">How I Started</a>
+        <a href="#" onclick="showTab('training')">Trainings</a>
+        <a href="#" onclick="showTab('goals')">Achievements & Goals</a>
+        <a href="#" onclick="showTab('gallery')">Gallery</a>
+    </nav>
+
+    
+    <section id="home" class="active">
+    <h2>Welcome to Gabby’s Swim Life</h2>
+    <h2>In this webpage you will see everything about Swimming Journey, Trainings, Goals, Achievements, and many more!</h2>
+    <p>Follow Gabby Calleja on her socials:</p>
+  <ul>
+  <li><a href="https://www.facebook.com/gabiyayay" target="_blank">Louize Gabrielle Bibal Calleja on Facebook</a></li>
+  <li><a href="https://www.instagram.com/gabb.yc_/" target="_blank">@gabb.yc_ on Instagram</a></li>
+  <li><a href="https://www.tiktok.com/@gabby.bc?_r=1&_d=secCgYIASAHKAESPgo8qLL3B1uvomniYR4IlalbqJzfl6kghK83hOL55XcyQWG7QBSiweke1cLURGiB%2BlqDMbKHBoHM%2ByU0YeVHGgA%3D&_svg=1&checksum=ed65078e1dd1713f74d0dc214f5a75922f4a3472533e2f4e3a4ac105e62fb796&item_author_type=1&sec_uid=MS4wLjABAAAApwVlklGhfFwWVYrCX6c6xhLT3z5jN-BoXA0GoZcolqxF8gS0FcqWacqWa4h5MVBK&sec_user_id=MS4wLjABAAAApwVlklGhfFwWVYrCX6c6xhLT3z5jN-BoXA0GoZcolqxF8gS0FcqWacqWa4h5MVBK&share_app_id=1180&share_author_id=6911175252400145409&share_link_id=4EA1B6BA-C3D6-48CA-B737-516972E59FE9&share_scene=1&sharer_language=en&social_share_type=4&source=h5_t&timestamp=1758442044&tt_from=copy&u_code=dg8ahf5cc1g72l&ug_btm=b8727%2Cb0&user_id=6911175252400145409&utm_campaign=client_share&utm_medium=ios&utm_source=copy" target="_blank">@gabby.bc on TikTok</a></li>
+  </ul>
+  <div style="text-align: center; margin-top: 30px; font-style: italic; font-weight: 500; color: #E36588; font-family: 'Poppins', sans-serif; font-size: 20px;">
+    “You can’t put a limit on anything. The more you dream, the farther you get.” – Michael Phelps
+</div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p><strong>I'm Louize Gabrielle B. Calleja, a proud Philippine Science High School (Pisay) scholar.</strong></p>
+        <p> Of course there's a side of me that needs a break from academic stress. That's where swimming comes in. It's my other world, my happy place where I can clear my mind. The pool is where I go to get rid of stress, have fun, and recharge. It's the perfect balance to my school life, and it's something I'll always love.</p>
+
+        <div class="about-image">
+            <figure>
+                <img src="https://images.fathomevents.com/image/upload/w_1200,dpr_2,f_auto,q_auto/v1701801002/Events/2024/1890/FBSC_Mean_Girls_2024_FE_Website.jpg.jpg" alt="Favorite Movie">
+                <figcaption>Favorite Movie</figcaption>
+            </figure>
+            <figure>
+                <img src="https://www.jocooks.com/wp-content/uploads/2021/09/garlic-butter-shrimp-1-10.jpg" alt="Favorite Food">
+                <figcaption>Favorite Food</figcaption>
+            </figure>
+            <figure>
+                <img src="https://img.freepik.com/free-photo/blurred-pop-abstract-background-pink_58702-1695.jpg?semt=ais_incoming&w=740&q=80" alt="FAv color">
+                <figcaption>Favorite Color</figcaption>
+            </figure>
+             <figure>
+                <img src="https://images.genius.com/8d3845cd1bf8c2d4322b06b185c974a5.1000x1000x1.png" alt="Favorite Song">
+                <figcaption>Favorite Song</figcaption>
+            </figure>
+             <figure>
+                <img src="https://aquaswimsupplies.co.uk/cdn/shop/files/arena-tie-dye-challenge-back-ladies-swimsuit-pink-multi-7.jpg?v=1736281481" alt="Favorite brand">
+                <figcaption>Favorite Swim Brand</figcaption>
+            </figure>
+        </div>
+    </section> 
+
+    <section id="journey">
+        <h2>My Swimming Journey</h2>
+        <p>I started swimming when I was 8 years old. At first, it was difficult, I even cried on the first day but eventually got over it and finished my lessons. After that, I kept doing more until I leveled up into competitive swimming, started joining competitions, and training every afternoon.</p>
+        <div class="gallery">
+            <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t1.6435-9/58933371_163474277987924_8541425135414935552_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7IHjK40eIb8Q7kNvwFXXhBg&_nc_oc=AdnHYF-hGVszt6ytkQSrABW9kXb6fUj59JKboIkOUvrn2EixYsdoxAWUx_otRVPDp16KHTd78bHpa7EH0yzKUuC7&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=RiSUu6txDvwI4yCPK4PN4w&oh=00_AfZwheefsc2_3Ge1v4xSNduM_u8b-yDGxV_YXmKX1jspYw&oe=68F72086" alt="Swimming picture 1">
+            <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t1.6435-9/58460808_163474311321254_4094721665664024576_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=M3TJH0-w0kEQ7kNvwFuEdPC&_nc_oc=AdmEY0PWT0WTVe0idkbVSSyWmKZ0RPsG7fjrKC4MQCobxIK-U3uYGwU3gmlaN6hv6LkHGPttAdBYtqOovrCL-qZk&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=qlXG5AWN2j9mGoNGXziZzQ&oh=00_Afadg99H6KqMvzyk3DdwwsHpAn6OIz0xPGT0X_EB8cc-rg&oe=68F7228E" alt="Swimming picture 2">
+            <img src="https://scontent.fcgy1-2.fna.fbcdn.net/v/t1.6435-9/58543033_163474334654585_2255639832275451904_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=74WfZ3NAxwoQ7kNvwF10Rmh&_nc_oc=AdmFnz9ZZdoou_iWE3dapZCVcE1iVrUF7sPzOM048O7SbCdTn9VxwWjJ6x5cg-N2ilbshjUITLVkJUMeqCiJ_BOj&_nc_zt=23&_nc_ht=scontent.fcgy1-2.fna&_nc_gid=XRNrNLJzqpQBofyXOKDBfg&oh=00_AfYu6NBelJ6ITtpK0IkNPBCFJPv8YeTWIFU0wF176_LtnQ&oe=68F719B6" alt="Swimming picture 3">
+        </div>
+    </section>
+
+    <section id="training">
+        <h2>Trainings</h2>
+        <p>I usually practice 2-3 times per week depending on whether I don't have any schoolworks.</p>
+        <div class="pool-container">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/d5/a3/12/wow-recreation-activity.jpg?w=1200&h=1200&s=1" alt="My fav pool">
+            <div class="pool-text">The Pool I love to Train In</div>
+        </div>
+        <div class="pool-container">
+            <img src="https://gttp.images.tshiftcdn.com/310990/x/0/where-to-stay-in-pampanga-the-best-hotels-amp-resorts-to-book-6.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Other pool I train in">
+            <div class="pool-text">Other Pool I Train In</div>
+        </div>
+        <div class="training-quote">
+            <p>“Every lap is a step closer to your goal.”</p>
+        </div>
+    </section>
+
+    <section id="goals">
+    <h2 style="font-family: 'Dancing Script', cursive; color: #E36588;">Achievements & Goals</h2>
+    <p>Some of my achievements include:</p>
+    <ul>
+        <li><strong>CLRAA Meet 2023-2025 Qualifier</strong> - Central Luzon Regional Association Athletic Association</li>
+        <li><strong>Bronze Medalist</strong> in 4x100 Freestyle Relay: CLRAA 2023</li>
+        <li><strong>MCDAAM 2024-2025 Medalist</strong> - Mabalacat City Division Amateur Athletic Meet</li>
+        <li><strong>Most Outstanding Swimmer (MOS)</strong> in Swimming Competitions</li>
+        <li><strong>SPEEDO 2024 NATIONAL SHORT COURSE INTER-SCHOOL SWIMMING CHAMPIONSHIPS Medalist</strong></li>
+        <li><strong>5th Place Age 9-12</strong> New Clark City Aquathlon 2022</li>
+        <li><strong>1st Place Age 14-15</strong> - Phoenix Kids Aquathlon 2025</li>
+    </ul>
+    <p><em>(This list updates every time.)</em></p>
+    <p>My future goal and dream is to be an amazing swimmer like my idols, Michael Phelps, Summer Mcintosh and a lot more.</p>
+    <p><strong>I want to improve, be consistent, and always train hard.</strong>.</p>
+</section>
+
+    <section id="gallery">
+        <h2>Gallery:</h2>
+    <div class="gallery">
+        <img src="https://scontent.fcgy1-2.fna.fbcdn.net/v/t39.30808-6/547491330_10166172113143206_9142376532111677223_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WFKtuUlVHp8Q7kNvwGcw8r_&_nc_oc=Adl6tf14VBwEN3ia3mdcy2fzCfXwqQ1knNm7wmf6MsknorWc0533WI5aQMdzBT92H7xWo3p1fSj55ykliJkoEW31&_nc_zt=23&_nc_ht=scontent.fcgy1-2.fna&_nc_gid=Q2fdp5pdluFwyQ682lMU_g&oh=00_AfafKjky0vXipavY_7BWMKDZQzn6uJe2X-cgR9elIbD5lQ&oe=68D57272" alt="Swimming picture 1" >
+        <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/485768167_9934295346580702_122604967603073902_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=ksY6ONIdpCIQ7kNvwGiz-XD&_nc_oc=AdnnIFloFjm8yLsNpn_D4PuxqeprEvoUcJgC_1UIjbxo8YmjqZsVTZzWfoI_G1F5ZVqzx03mRl-MV2-iwKWKV-hZ&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=qhhFSPXHpoLEsxVA_0sk1w&oh=00_AfZtdFnvA6JqsBnNa69jVWKQioo2AZVfM6Yo0ZaBOGk7Dg&oe=68D5546A" alt="Swimming picture 2">
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/529751124_10165999221538206_435529537676622873_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=BKtbkSVZXgUQ7kNvwE0aAXb&_nc_oc=AdkiW8FFfRKXaoycY-vaIeH48cNbI-q4FHiRjYHjx5lSEbGeUoa1QsFwDtXtkpLLfdBZ-qWMFHnyUC9ylabWOeW3&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=hEdbIpOzv2t2YXcsMNWuMw&oh=00_AfY0ahJR-bYA0YAU9rgK0OmXuEjmaQ3gDP1Gh96KJj_dhg&oe=68D5490C" alt="Swimming picture 3">
+        <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t1.6435-9/83945973_10159407687623206_7011943129045532672_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TUm45wRoV4cQ7kNvwFEFJS2&_nc_oc=AdmHd4gmXaPrGt92UXaaLGnutQcpchXe_JY40CG86EBojnqw6zvcVcX-ak6iqhWUMiINbn3BKMRk1AK6A8hzqS6u&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=6YCPN3Y8cgELw2Dr1Mn3BA&oh=00_AfYnEs-IqP65sF8eX3R7lqqwSi5gA1eei_EmEYJIMu9Bcg&oe=68F6E7E7" alt="Swimming picture 4">
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/515557190_10165758580463206_4602838061012335260_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Xh-F76-WzxQQ7kNvwEzYEGz&_nc_oc=AdnC6ifAWX8XUVnpAEnP3KRUNt_pKKZrZQPLZjqbXXnf8F94Er2SGyhnL3dbiNu7QuKYyGdWaJmeelnAxJg1MFko&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=wEIjjKTUyicKLTxrDNgM5g&oh=00_AfaFNdM9qYfPAapgKLXO6Iud1EudicyPejVhF4xpyxh27w&oe=68D56267" alt="Swimming picture 5">
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t1.6435-9/83855940_10159407685568206_1395539044607197184_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=x-BabpbrnLgQ7kNvwHaPl-7&_nc_oc=AdlZGOLvipAmRqhENymaP7Ly9MKCaiYSa3R-w8WzvN3zjbaiz5qANm8eSNcA3T8iEKGBo3qon4M41HqbJHeP0i4M&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=KNShVw0R0NSGqQ_9eLcReQ&oh=00_AfaBrrVK8MFceHiMnKwnWj4XtNrniZghAqnCp0saHRznzA&oe=68F6F851" alt="Swimming picture 6">
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/470139476_10164812862413206_265663038488486375_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lQaautt97BQQ7kNvwGI12d2&_nc_oc=Adnj3CIB7-2gqCX21Wam4fQ-gv47SKMBEjPcbmWsrBb6oHivwf9789Rp38A5T6Iu_1NizOl4wgArxEeu7EluIob3&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=58X8uoIaYiuz6c3P0hqKZA&oh=00_Afax1BIXYkUvtiQ5t3VOCTl_I5wXg4Tc8UxdoOwSnPQOLw&oe=68D56071" alt="Swimming picture 7" >
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t1.6435-9/79839579_10159237052883206_937783126711599104_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_ohc=tMMbWAcFSLwQ7kNvwFibHct&_nc_oc=AdmjZqrY0HXy_OAI3DC3FIB0Rj1nTzRmgFbK40iJY0jY_KFn5TJHwCZa3qlNbh951_HyyR8svirR1E-UmKkE7beq&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=ew9gbW_hzctQSvjZM4-70g&oh=00_Afa9Ew8BM1GfHUWh3CB4jg0L-5JsOFvQCcavfFcid6pkmQ&oe=68F6E7A9" alt="Swimming picture 8" >
+        <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/469515415_10169925058515576_5824958775141738183_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=h40yGPMPug8Q7kNvwHsRTm7&_nc_oc=AdmNNCpyPojdxHezg4S4rpkNS-w_hwuBVl25l1jvOs0GrawYFcSNP3E0SQMyEc7ItD2dmlt1fzq7sZXt5q5tT0u6&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=sFa1d2NytLR3uR5uUX-TxQ&oh=00_Afbw9Ai6FtJlzj4L1x5U0Qzbb1jNmkQfwqKCybOcJS5j2g&oe=68D571D3" alt="Swimming picture 9">
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t1.6435-9/71142747_10158926865638206_8681386467345301504_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nMTpy4GxhwEQ7kNvwFLpZ4l&_nc_oc=AdkQWmPCt8N1z3G48jrRcSSDSfoJTN7dsmGYBjEjysxHeG4HqFwHBK_4-NIE77d6eYJMlbBYJsYhRAJtIWlG4DAU&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=bdf7vuklZxSWl3uuYJzbdQ&oh=00_AfYqYn1xVZLgLi3I2AOfo0Tkif-ggcdtMd0TOVAvQf4CZA&oe=68F70619" alt="Swimming picture 10">
+        <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/514499883_10165713475388206_9026763786843973735_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TZUPJW0tTQIQ7kNvwGZmjre&_nc_oc=Adk30IMra3UqQdh1jskV7MQPX_K4LqqO9tEA_6AenVyleX1siLeIfNyfmbbffPf51l6StztV16uGlkxZS6YrWQuZ&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=l1hYI8quTjaEHvjDb-Zy_w&oh=00_AfZpfy56zDo5j38ABHuaD2JMpKA3xm1vUw07leQ7xMaPXw&oe=68D558DB" alt="Swimming picture 11">
+        <img src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/518308270_10165798882593206_3893578167727346356_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=W49jKF4Z3RIQ7kNvwGFP0li&_nc_oc=AdnzUzFX3IGS-ap_4rSkSdqTHHw3yIbk0cdexqVvUMKu7_VColPw8z1lPxrbJ8MyirJ-5Z-hu5UlEUPk72CL59WK&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=mMRyh6-BxM5EZqdTyi9iaw&oh=00_AfYSRyWt7P2XVq346Z6HB9oxyDGKbX-CYsowoei2BZ6eWg&oe=68D5661C" alt="Swimming picture 12">
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/474713653_10164958833333206_8546773558548200407_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=GRJyBQjPv3EQ7kNvwHCCL9O&_nc_oc=AdkWmlbm0EQysFjlIaJf0Kj9NqybmSlIhIAQBXwBT08jzqSWhL4dePCHVrvLyc2eFcgSHDLWnjzlfKaaV-Rh-5tJ&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=m04zQSb7-BDQjAAnml2Ngw&oh=00_AfZJzge6mXCUnBMa3u0CeG4c5MLzzq6DwxGyuW1Lm_vyxQ&oe=68D543A8" alt="Swimming picture 13">
+        <img src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-6/476455009_1332628987739108_5817972414333775115_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=B9eNVYJhQfgQ7kNvwFr5PV2&_nc_oc=AdlwrVm8v0Tq3qy_q6xV8c6OGV7kT84NfoCml8iGIhsmWYFQ9QzNfaU9kWyfnw-C4-DS2ZfhJraUjloNxX7jBLtm&_nc_zt=23&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=mbh8Fi4Xzf5xYWqBI2JKMw&oh=00_AfYB7vSNQXRZkraCaXpKup9aEl5gCqmqxNEMsYM7ZlgSAw&oe=68D562CE" alt="Swimming picture 14">
+        <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/515013735_10165722583083206_3318910072061214396_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xaCK3MPd02EQ7kNvwH0cjul&_nc_oc=AdlXQy3EFxvTAWobbjRYSTUc3riMqq-PD07nHaQijpc5KUCNq43lwuc4eckp8cpcGVumgmI9jlEuCuFTHzurhgxy&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=OR_7fKC5IP_W7kUCJn_H1g&oh=00_AfYjVAvdfpR6HHqWCoLbHv5-BIEEyNF-16Y5ogvff7WdkQ&oe=68D56152" alt="Swimming picture 15">
+    </div>
+</section>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll("section").forEach(sec => {
+                sec.classList.remove("active");
+            });
+            document.getElementById(tabId).classList.add("active");
+        }
+    </script>
+</body>
+</html>
